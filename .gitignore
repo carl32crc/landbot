@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+
+# package-log
+/package-lock.json
+
+# compiled output
+/build
+/dist/*.js
