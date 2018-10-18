@@ -2,8 +2,10 @@ import express from 'express'
 
 const router = express.Router()
 
-import getCustumersList from './handlers/getCustumersList'
+import getCustomersList from './handlers/getCustomersList'
+import updateCustomer from './handlers/updateCustomer'
 
-router.get('/getCustumersList', getCustumersList)
+router.get('/getCustomersList', getCustomersList)
+router.put('/updateCustumer', updateCustomer)
 
 export default router

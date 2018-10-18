@@ -1,7 +1,8 @@
 import app from './server'
+import { developDomain } from './shared/constants'
 
-const PORT = 3000
+const { port } = developDomain
 
-app.listen(PORT)
+app.listen(port)
 /* eslint-disable */
-console.log(`Listening on PORT ${PORT}...`)
+console.log(`Listening on PORT ${port}...`)
