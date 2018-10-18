@@ -12,7 +12,8 @@ const landbotAPI = {
   },
   URL: {
     getCustomers: 'https://api.landbot.io/v1/customers/',
-    updateCustomer: 'https://api.landbot.io/v1/customers/:ID/fields/:FIELD/'
+    getCustumer: 'https://api.landbot.io/v1/customers/:ID/',
+    updateCustomer: 'https://api.landbot.io/v1/customers/:ID/fields/:FIELD/',
   }
 }
 
