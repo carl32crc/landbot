@@ -1,20 +1,27 @@
+import dotenv from 'dotenv'
+
+dotenv.load()
+
+const { PORT, API_LANDBOT_TOKEN } = process.env
 
 const developDomain =  {
-  port: 3000,
+  port: PORT,
   get url() { return `http://localhost:${this.port}/` },
   get apiUrl() { return `${this.url}api/` }
 }
 
-const landbotAPI = {
+const landBot = {
   headers: {
+    timeout: 3000,
     contentType: 'application/json',
-    Authorization: 'Token 7be4b8a61dcb1715018c1f26aba5129b94af563b'
+    Authorization: API_LANDBOT_TOKEN
   },
-  URL: {
-    getCustomers: 'https://api.landbot.io/v1/customers/',
-    getCustumer: 'https://api.landbot.io/v1/customers/:ID/',
-    updateCustomer: 'https://api.landbot.io/v1/customers/:ID/fields/:FIELD/',
+  API: {
+    urlBase: 'https://api.landbot.io/v1/',
+    get customers() { return `${this.urlBase}customers/`},
+    get custumer() { return `${this.urlBase}customers/:ID/` },
+    get updateCustomer() { return `${this.urlBase}customers/:ID/fields/:FIELD/` }
   }
 }
 
-export { developDomain, landbotAPI }
+export { developDomain, landBot }
