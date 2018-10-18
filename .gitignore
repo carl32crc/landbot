@@ -7,3 +7,4 @@
 # compiled output
 /build
 /dist/*.js
+/dist/css
