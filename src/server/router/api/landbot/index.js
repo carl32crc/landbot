@@ -8,6 +8,6 @@ import updateCustomer from './handlers/updateCustomer'
 
 router.get('/getCustomers', getCustomers)
 router.get('/getCustomer/:id', getCustomer)
-router.put('/updateCustumer', updateCustomer)
+router.put('/updatecustomer', updateCustomer)
 
 export default router

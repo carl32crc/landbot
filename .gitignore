@@ -6,5 +6,6 @@
 
 # compiled output
 /build
+/coverage
 /dist/*.js
 /dist/css

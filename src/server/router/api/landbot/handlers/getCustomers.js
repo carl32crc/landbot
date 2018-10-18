@@ -9,7 +9,5 @@ export default function (req, res) {
       const customers = response.data.customers.map(customer => ({id: customer.id, name: customer.name, email: customer.email})) 
       res.status(200).json({data: customers, total: response.data.total})
     })
-    .catch(error => {
-      res.status(error.response.status).json({status: error.response.status, error: error.response.data.detail})
-    })
+    .catch(error => res.status(error.response.status).json({status: error.response.status, error: error.response.data.detail}))
 }

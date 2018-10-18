@@ -19,7 +19,7 @@ const landBot = {
   API: {
     urlBase: 'https://api.landbot.io/v1/',
     get customers() { return `${this.urlBase}customers/`},
-    get custumer() { return `${this.urlBase}customers/:ID/` },
+    get customer() { return `${this.urlBase}customers/:ID/` },
     get updateCustomer() { return `${this.urlBase}customers/:ID/fields/:FIELD/` }
   }
 }
