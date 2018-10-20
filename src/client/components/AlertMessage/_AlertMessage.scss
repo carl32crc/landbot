@@ -1,0 +1,20 @@
+
+.alertMessage {
+  background-color: #333;
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  width: 23%;
+  padding: 20px;
+  top: 82%;
+  transform: translateY(550%);
+  text-align: center;
+
+    span {
+      position: absolute;
+      right: 20px;
+      font-weight: bold;
+      color: #FFF;
+      cursor: pointer;
+    }
+}

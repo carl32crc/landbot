@@ -14,4 +14,10 @@ const getCustomer = (id) => {
   })
 }
 
-export { getCustomers, getCustomer }
+const updateCustomer = (id, field, value) => {
+  return axios.put(`${domain.apiUrl}updatecustomer`, { field, id, value }).then(response => {
+    return handlerError(response)
+  })
+}
+
+export { getCustomers, getCustomer, updateCustomer }

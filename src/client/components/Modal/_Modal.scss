@@ -15,9 +15,9 @@
       position: absolute;
       z-index: 100;
       background: white;
-      width: 80%;
+      width: 70%;
       padding: 20px;
-      margin-left: calc(10% - 20px);
+      margin-left: calc(15% - 20px);
       top: 50%;
       transform: translateY(-50%);  
       display: flex;  
@@ -26,6 +26,10 @@
 
       div {
         margin-top: 15px;
+      }
+
+      img {
+        width: 200px;
       }
 
       span {
