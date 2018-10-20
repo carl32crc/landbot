@@ -1,6 +1,6 @@
 
 .modal-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 100;
 
@@ -23,6 +23,8 @@
       display: flex;  
       flex-direction: column;
       align-items: center;
+      animation-name: animatetop;
+      animation-duration: 0.5s;
 
       div {
         margin-top: 15px;
@@ -57,4 +59,9 @@
       justify-content: flex-end;
       width: 100%;
     }
+}
+
+@keyframes animatetop {
+  from {top: -50%; opacity: 0}
+  to {top: 50%; opacity: 1}
 }
