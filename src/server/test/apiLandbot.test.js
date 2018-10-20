@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { landBot } from '../../shared/constants'
+import { landBot } from '../constants'
 
 const { headers, API } = landBot
 
