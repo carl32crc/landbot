@@ -50,8 +50,8 @@ class App extends Component {
     this.setState({alert})
   }
 
-  onBlur = () => {
-    if(this.state.params && this.state.params.value !== name) {
+  onBlur = (value) => {
+    if(this.state.params && this.state.params.value !== '' && this.state.params.value !== value) {
       const { id, field, value } = this.state.params
       this.updateCustomer(id, field, value)
     }
@@ -62,8 +62,8 @@ class App extends Component {
     this.setState({params})
   }
 
-  onKeyPress = (e, name) => {
-    if(e.key === 'Enter' && this.state.params && this.state.params.value !== name) {
+  onKeyPress = (e, value) => {
+    if(e.key === 'Enter' && this.state.params && this.state.params.value !== value) {
       const { id, field, value } = this.state.params
       this.updateCustomer(id, field, value)
     }
@@ -86,10 +86,10 @@ class App extends Component {
   updateCustomer(id, field, value) {
     updateCustomer(id, field, value).then(response => {
       if (response.data.field) {
-        let alert = {message:'Success save', color: '#34e37e', show: true}
-        this.setState({customer: response.data.field, spinner: false, alert})
+        let alert = {message: `Success save ${response.data.field.value}`, color: '#34e37e', show: true}
+        this.setState({customer: response.data.field, alert})
       } else {
-        let alert = {message:'Error save', color: '#ff0000', show: true}
+        let alert = {message:`Success save ${response.data.field.value}`, color: '#ff0000', show: true}
         this.setState({alert})
       }
     })
@@ -104,7 +104,7 @@ class App extends Component {
           [<HeaderTable customers={this.state.customers} key={1}>
             {this.state.customers.map(customer => {
               return <ContentTable 
-                email={customer.email} 
+                email={customer.email}
                 id={customer.id}
                 key={customer.id}  
                 name={customer.name}

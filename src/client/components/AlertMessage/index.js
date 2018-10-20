@@ -9,4 +9,3 @@ const AlertMessage = ({ messageColor, visible, message, closeAlert }) => (
 )
 
 export default AlertMessage
-

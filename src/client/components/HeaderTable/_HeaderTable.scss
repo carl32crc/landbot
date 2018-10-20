@@ -55,12 +55,18 @@
     border-bottom:none;
   }
    
-  tr:nth-child(odd) td {
+  tr td {
     background:#EBEBEB;
   }
    
-  tr:nth-child(odd):hover td {
+  tr:hover td {
     background:#4E5066;
+
+    input {
+      background: #4E5066;
+      color: #FFF;
+      border-bottom:  1px solid #FFF;
+    }
   }
    
   tr:last-child td:first-child {
@@ -77,6 +83,7 @@
    
   td {
     background:#FFFFFF;
+    cursor: pointer;
     padding:20px;
     text-align:left;
     vertical-align:middle;
