@@ -2,13 +2,7 @@ import dotenv from 'dotenv'
 
 dotenv.load()
 
-const { PORT, API_LANDBOT_TOKEN } = process.env
-
-const developDomain =  {
-  port: PORT,
-  get url() { return `http://localhost:${this.port}/` },
-  get apiUrl() { return `${this.url}api/` }
-}
+const { API_LANDBOT_TOKEN } = process.env
 
 const landBot = {
   headers: {
@@ -24,4 +18,4 @@ const landBot = {
   }
 }
 
-export { developDomain, landBot }
+export { landBot }

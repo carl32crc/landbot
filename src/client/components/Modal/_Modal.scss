@@ -1,0 +1,56 @@
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+
+    .modal-background {
+      background: black;
+      opacity: 0.5;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .modal-card {
+      position: absolute;
+      z-index: 100;
+      background: white;
+      width: 80%;
+      padding: 20px;
+      margin-left: calc(10% - 20px);
+      top: 50%;
+      transform: translateY(-50%);  
+      display: flex;  
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        margin-top: 15px;
+      }
+
+      span {
+        font-weight: bold;
+        margin-right: 15px;
+      }
+    }
+
+    .modal-header {
+      margin-bottom: 30px;
+      font-size: 20px;
+      font-weight: 600;
+
+      span {
+        position: absolute;
+        right: 15px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+
+    .modal-footer {
+      margin-top: 40px;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+}
