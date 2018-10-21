@@ -58,6 +58,8 @@
     "babel-preset-airbnb": "^2.5.3",
     "babel7-jest": "^1.0.1",
     "css-loader": "^1.0.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
@@ -68,6 +70,7 @@
     "jest": "^23.6.0",
     "node-sass": "^4.9.2",
     "postcss-loader": "^2.0.10",
+    "react-test-renderer": "^16.5.2",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "webpack": "^3.12.0"
