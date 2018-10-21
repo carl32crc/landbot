@@ -88,7 +88,7 @@ class App extends Component {
       let params = { id: '', field: '', value: ''}
       if (response.data.field) {
         let alert = {message: `Success save ${response.data.field.value}`, color: '#34e37e', show: true}
-        this.setState({customer: response.data.field, alert, params})
+        this.setState({updateCustomer: response.data.field, alert, params})
       } else {
         let alert = {message:`Success save ${response.data.field.value}`, color: '#ff0000', show: true}
         this.setState({alert, params})

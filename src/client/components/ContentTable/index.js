@@ -2,7 +2,7 @@ import React from 'react'
 import Input from './../Input'
 
 const ContentTable = ({ id, name, email, onBlur, onHandleChange, onKeyPress, openModal }) => (
-  <tr onClick={(e) => openModal(id, e)}>
+  <tr className="prueba" onClick={(e) => openModal(id, e)}>
     <td className="text-left">
       <Input       
         field='name'
