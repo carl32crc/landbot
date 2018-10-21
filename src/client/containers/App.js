@@ -8,6 +8,8 @@ import Spinner from './../components/Spinner'
 
 import { getCustomers, getCustomer, updateCustomer } from './../services/customers'
 
+import { validateEmail } from '../../shared/utils/validateEmail'
+
 class App extends Component {
 
   state = {
@@ -50,10 +52,10 @@ class App extends Component {
     this.setState({alert})
   }
 
-  onBlur = (value) => {
-    if(this.state.params && this.state.params.value !== '' && this.state.params.value !== value) {
+  onBlur = () => {
+    if(this.state.params && this.state.params.value !== '') {
       const { id, field, value } = this.state.params
-      this.updateCustomer(id, field, value)
+      this.valideteEmail(id, field, value)
     }
   }
   
@@ -62,11 +64,19 @@ class App extends Component {
     this.setState({params})
   }
 
-  onKeyPress = (e, value) => {
-    if(e.key === 'Enter' && this.state.params && this.state.params.value !== value) {
+  onKeyPress = (e) => {
+    if(e.key === 'Enter' && this.state.params.value !== '') {
       const { id, field, value } = this.state.params
-      this.updateCustomer(id, field, value)
+      this.valideteEmail(id, field, value)
     }
+  }
+
+  valideteEmail(id, field, value) {
+    if(field === 'email' && !validateEmail(value)) {
+      let alert = {message: 'Invalid Email', color: '#ff0000', show: true}
+      return this.setState({alert})
+    }
+    this.updateCustomer(id, field, value)
   }
 
   customersList() {

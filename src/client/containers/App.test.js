@@ -74,4 +74,11 @@ describe('App component', () => {
       expect(app.state().modalSpinner).toBe(true)
     }, 2000)
   })
+
+  it('it should return Invalid email', () => {
+    app.instance().valideteEmail('452174', 'email', 'myemail')
+    setTimeout(() => {
+      expect(app.state().customer.alert.message).toEqual('Invalid Email')
+    }, 2000)
+  })
 })
