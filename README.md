@@ -4,8 +4,9 @@
 * [NodeJS](https://nodejs.org/en/)
 
 ## Setup
-> <p>1. npm install</p>
-> <p>2. npm run dev (this CLI run 'npm run dev:server', 'npm run dev:build-server' and 'npm run dev:build-client')</p>
+> <p>step 1. npm install</p>
+> <p>step 2. npm run dev (this CLI run 'npm run dev:server', 'npm run dev:build-server' and 'npm run dev:build-client')</p>
+> <p>step 3. Go to http://localhost:3004</p>
 
 ## Run test
 > <p>npm t</p>
